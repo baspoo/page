@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>ShowRoom | AR2021</title>
+    <title>CARSHOWROOM | AR2021</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+      <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-fullscreen-button"></div>
       </div>
@@ -55,9 +56,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/WEB.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WEB.data.gz",
-        frameworkUrl: buildUrl + "/WEB.framework.js.gz",
-        codeUrl: buildUrl + "/WEB.wasm.gz",
+        dataUrl: buildUrl + "/WEB.data",
+        frameworkUrl: buildUrl + "/WEB.framework.js",
+        codeUrl: buildUrl + "/WEB.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "com.demo.ar",
         productName: "AR2021",
@@ -85,15 +86,13 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
-          canvas.style.width = window.innerWidth + 'px';
-          canvas.style.height = window.innerHeight + 'px';
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
 
-
-          unityShowBanner('WebGL builds are not supported on mobile devices.');
-
-
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
           canvas.style.width = window.innerWidth + "px";
           canvas.style.height = window.innerHeight + "px";
       }
