@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>ShowRoom | AR2021</title>
+    <title>Unity WebGL Player | AR2021</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -16,8 +16,11 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+      <div id="unity-warning"> </div>
       <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">AR2021</div>
       </div>
     </div>
     <script>
@@ -55,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/WEB.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WEB.data.unityweb",
-        frameworkUrl: buildUrl + "/WEB.framework.js.unityweb",
-        codeUrl: buildUrl + "/WEB.wasm.unityweb",
+        dataUrl: buildUrl + "/WEB.data",
+        frameworkUrl: buildUrl + "/WEB.framework.js",
+        codeUrl: buildUrl + "/WEB.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "com.demo.ar",
         productName: "AR2021",
@@ -92,8 +95,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-          canvas.style.width = window.innerWidth + "px";
-          canvas.style.height = window.innerHeight + "px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
@@ -108,15 +111,6 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
-
-            function onResize() {
-                canvas.style.width = window.innerWidth + "px";
-                canvas.style.height = window.innerHeight + "px";
-            };
-            window.addEventListener('resize', onResize);
-            onResize();
-
-
         }).catch((message) => {
           alert(message);
         });
