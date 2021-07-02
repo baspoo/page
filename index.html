@@ -1,0 +1,54 @@
+//////  www.thelastbug.com?action_id=JK42517
+
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>1MobyStudio | RedirectURL</title>
+</head>
+<body>
+
+    <script>
+        function openDeepLink() {
+
+      
+            console.log("openDeepLink");
+
+            const params = new URLSearchParams(window.location.search)
+
+            url_parameter = params.get('action_id');
+            console.log(url_parameter);
+            var fullpath = "unitydl://mylink?" + url_parameter;
+            //var fullpath = "http://google.co.th";
+
+            if (!exists(fullpath))
+            {
+                console.log("notfound!!!");
+            }
+            else
+            {
+                console.log("found!!!");
+                window.location.replace(fullpath);
+            }
+            //window.location = fullpath;
+        }
+        function exists(url)
+        {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            return http.status == 200;
+        }
+
+ 
+        openDeepLink();
+    </script>
+
+
+
+
+
+
+</body>
+</html>
