@@ -64,66 +64,68 @@
 			</a>
 		</div>
 		<div class="d-flex justify-content-center">
-							<div class="align-self-center mx-1">
-					<img class="online-icon" src="https://www.ak29king.com/assets/images/online.gif" alt="" width="30">
+			<div class="align-self-center mx-1">
+				<img class="online-icon" src="https://www.ak29king.com/assets/images/online.gif" alt="" width="30">
+			</div>
+			<div class="align-self-center text-center mx-1">
+				<div class="">
+					<button class="btn btn-login-top" data-toggle="modal" data-target="#loginModal">
+						เข้าสู่ระบบ
+					</button>
 				</div>
-				<div class="align-self-center text-center mx-1">
-					<div class="">
-						<button class="btn btn-login-top" data-toggle="modal" data-target="#loginModal">
-							เข้าสู่ระบบ						</button>
-					</div>
-				</div>
-				<div class="modal" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<loading :active.sync="pre_loader"
-			 :can-cancel="false"
-			 :width="80"
-			 :height="60"
-			 :opacity="0.2"
-			 color="#fff"
-			 :is-full-page="true"></loading>
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-body">
-				<div class="text-center py-2">
-					<img src="https://ak29king.com/assets/images/logo.png" alt="" width="30%">
-				</div>
-				<div class="form-login">
-					<div class="">
-						<div class="input-group mb-3">
-							<input type="tel" class="form-control" name="username" id="username" ref="username" v-model="form.username"  placeholder="เบอร์มือถือ">
-						</div>
-						<div class="input-group mb-3">
-							<input type="password" name="password" id="password" ref="password" v-model="form.password" class="form-control" placeholder="รหัสผ่าน">
-						</div>
-						<div class="pb-1 login-desktop text-center">
-							<button type="button" class="btn btn-lg btn-login" @click.prevent="doLogin" >เข้าสู่ระบบ</button>
-						</div>
-						<div class="pb-1 login-mobile text-center">
-							<button type="button"  class="btn btn-lg btn-login" @click.prevent="doLogin" >เข้าสู่ระบบ</button>
-						</div>
-					</div>
-					<div class="footer-form py-3">
-						<div class="row ">
-							<div class="col-7">
-								<!-- FixChange -->
-								<span class="text-white">ท่านยังไม่มีบัญชี?</span> <a href="https://baspoo.github.io/page/test/register.html" style="" class="text-white"><u>สมัครสมาชิก</u></a>
+			</div>
+			<div class="modal" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<loading :active.sync="pre_loader"
+						 :can-cancel="false"
+						 :width="80"
+						 :height="60"
+						 :opacity="0.2"
+						 color="#fff"
+						 :is-full-page="true"></loading>
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="text-center py-2">
+								<img src="https://ak29king.com/assets/images/logo.png" alt="" width="30%">
 							</div>
-							<div class="col-5 text-right">
-								<a href="https://lin.ee/djVMkd2" target="_blank" class="text-decoration-none text-white">ลืมรหัสผ่าน ?</a>
+							<div class="form-login">
+								<div class="">
+									<div class="input-group mb-3">
+										<input type="tel" class="form-control" name="username" id="username" ref="username" v-model="form.username" placeholder="เบอร์มือถือ">
+									</div>
+									<div class="input-group mb-3">
+										<input type="password" name="password" id="password" ref="password" v-model="form.password" class="form-control" placeholder="รหัสผ่าน">
+									</div>
+									<div class="pb-1 login-desktop text-center">
+										<button type="button" class="btn btn-lg btn-login" @click.prevent="doLogin">เข้าสู่ระบบ</button>
+									</div>
+									<div class="pb-1 login-mobile text-center">
+										<button type="button" class="btn btn-lg btn-login" @click.prevent="doLogin">เข้าสู่ระบบ</button>
+									</div>
+								</div>
+								<div class="footer-form py-3">
+									<div class="row ">
+										<div class="col-7">
+											<!-- FixChange -->
+											<span class="text-white">ท่านยังไม่มีบัญชี?</span> <a href="https://baspoo.github.io/page/test/register.html" style="" class="text-white"><u>สมัครสมาชิก</u></a>
+										</div>
+										<div class="col-5 text-right">
+											<a href="https://lin.ee/djVMkd2" target="_blank" class="text-decoration-none text-white">ลืมรหัสผ่าน ?</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-<script>
-	let login_username = "";
-	let login_password = "";
-</script>
-<script type="text/javascript" src="https://www.ak29king.com/assets/scripts/login.js?1630848857"></script>
-			
+			<script>
+				let login_username = "";
+				let login_password = "";
+			</script>
+			<!-- FixChange -->
+			<script type="text/javascript" src="https://baspoo.github.io/page/test/login.js?1630848857"></script>
+
 
 			<div class="align-self-center mx-1">
 				<img class="top-line" src="https://www.ak29king.com/assets/images/line.png" alt="" height="80">
