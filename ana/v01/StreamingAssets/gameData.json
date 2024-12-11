@@ -1,0 +1,23 @@
+{
+    "spwan": {
+        "monster": {},
+        "boss": {}
+    },
+    "dropRate": {
+        "pointAmount": 10,
+        "coinDropAmount": 10,
+        "pointDrop": 3,
+        "itemBonusRate": [
+            10,
+            40,
+            100
+        ],
+        "bigOre": 40,
+        "coin": 20,
+        "weapon": 10,
+        "boost": 30
+    },
+    "exchange": {
+        "orePerCoin": 10
+    }
+}
