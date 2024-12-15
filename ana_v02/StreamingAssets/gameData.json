@@ -1,7 +1,16 @@
 {
     "spwan": {
-        "monster": {},
-        "boss": {}
+        "monster": {
+            "timeRefresh": [
+                0.5,
+                1
+            ],
+            "maxSpawn": 50
+        },
+        "boss": {
+            "timeRefresh": 2,
+            "nextBornDuration": 300
+        }
     },
     "dropRate": {
         "pointAmount": 10,
